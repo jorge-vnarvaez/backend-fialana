@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "noticias",
+  "info": {
+    "singularName": "noticia",
+    "pluralName": "noticias",
+    "displayName": "Noticia",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "text"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "fecha_inicio": {
+      "type": "date"
+    },
+    "imagen_referencia": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tipo_contenido": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "text",
+      "required": true,
+      "default": "nombre-noticia-separado-por-guiones",
+      "unique": true
+    },
+    "sumario": {
+      "type": "text"
+    },
+    "destacado": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "participantes",
+  "info": {
+    "singularName": "participante",
+    "pluralName": "participantes",
+    "displayName": "Participante"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

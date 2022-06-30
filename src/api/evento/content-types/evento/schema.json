@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventos",
+  "info": {
+    "singularName": "evento",
+    "pluralName": "eventos",
+    "displayName": "Evento",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "imagen_referencia": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "participantes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::participante.participante"
+    },
+    "tipo_evento": {
+      "type": "string"
+    },
+    "ubicacion": {
+      "type": "string"
+    },
+    "url_reunion": {
+      "type": "string"
+    },
+    "fecha_inicio": {
+      "type": "datetime"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "tipo_contenido": {
+      "type": "string",
+      "default": "Evento",
+      "required": false
+    },
+    "slug": {
+      "type": "text",
+      "required": true,
+      "default": "nombre-evento-separado-por-guiones",
+      "unique": true
+    },
+    "sumario": {
+      "type": "text"
+    },
+    "destacado": {
+      "type": "boolean"
+    }
+  }
+}
