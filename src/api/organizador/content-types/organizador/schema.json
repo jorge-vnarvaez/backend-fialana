@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizadores",
+  "info": {
+    "singularName": "organizador",
+    "pluralName": "organizadores",
+    "displayName": "Organizador"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "text"
+    },
+    "contenidos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contenido.contenido",
+      "mappedBy": "organizador"
+    }
+  }
+}
